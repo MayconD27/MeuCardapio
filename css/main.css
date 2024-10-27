@@ -1,0 +1,80 @@
+
+main{
+    width: 100%;
+    height: 100vh;
+    background:url('../img/bkg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-bottom: var(--bkg-color) 2px solid;
+}
+.logo-main{
+    margin-top: 50px;
+    width: 90%;
+
+}
+.tit-main{
+    color: #fff;
+}
+.madeira{
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    filter: brightness(.2);
+    opacity: .7;
+}
+.info{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+}
+.pesq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+}
+.linha{
+    width: 30px;
+    height: 2px;
+    background-color: var(--bkg-color);
+}
+.pesq>span{
+    letter-spacing: 4px;
+}
+.tit-main>h1{
+    font-size: 40px;
+}
+.onda-container{
+    width: 100%;
+    overflow: hidden;
+}
+.onda{
+    width: 200%;
+    z-index: 1;
+    height: 200px;
+}
+.onda-container div{
+    background-color: var(--bkg-color);
+    width: 100%;
+    height: 200px;
+    margin-top: -10px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.onda-container p{
+    text-align: center;
+    width: 80%;
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: -60px;
+}
