@@ -45,7 +45,7 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 60%;
+    height: 50%;
 }
 .linha{
     width: 30px;
