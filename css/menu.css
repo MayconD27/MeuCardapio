@@ -1,0 +1,20 @@
+li .menu-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.menu-link:hover{
+    color: var(--primary-color);
+}
+
+.nav-tabs{
+    box-shadow: 0px 0px 10px #bdbdbd;
+    padding: 0 10px;
+}
+.nav-tabs .nav-link.active {
+    background-color: var(--focus-bkg);
+    border: none;
+    border-radius: 0;
+    margin-bottom:5px;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
