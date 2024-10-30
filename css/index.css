@@ -2,9 +2,9 @@
 :root{
     --bkg-color: #eff0ec;
     --primary-color: #287437;
-    --textDes-color: #093212;
+    --textTit-color: #093212;
     --focus-bkg:#0932122c;
-    --tex-color:#142417;
+    --textDex-color:#142417;
     --font:  "Arima", system-ui;
 }
 

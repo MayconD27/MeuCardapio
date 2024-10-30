@@ -1,0 +1,50 @@
+.card-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+.text-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    height: 120px;
+}
+
+.nome-item{
+    margin: 0;
+    color: var(--textTit-color);
+}
+.descri-item {
+    color: var(--textDes-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Número de linhas que deseja exibir */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%; /* Pode usar max-width para maior flexibilidade */
+}
+
+.img-item{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.preco-item{
+    display: flex;
+    color: var(--primary-color);
+    font-weight: 600;
+    align-items: start;
+    gap: 2px;
+}
+.preco-item span{
+    margin: 0;
+    font-size: 12px;
+}
+.valor-item{
+    font-size: 25px;
+    margin: -5px 0;
+}

@@ -2,13 +2,19 @@ li .menu-link {
     color: var(--primary-color);
     font-weight: 600;
 }
+.menu{
+    margin-top: 5px;
+}
 .menu-link:hover{
     color: var(--primary-color);
 }
 
 .nav-tabs{
-    box-shadow: 0px 0px 10px #bdbdbd;
+    box-shadow: 0px 10px 10px #bdbdbd46;
     padding: 0 10px;
+}
+.itens-menu{
+    padding: 10px 0;
 }
 .nav-tabs .nav-link.active {
     background-color: var(--focus-bkg);
@@ -17,4 +23,37 @@ li .menu-link {
     margin-bottom:5px;
     color: var(--primary-color);
     border-radius: 5px;
+}
+
+.sumario {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+
+.sumario h3 {
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    width: auto; /* Pode ajustar conforme necessário */
+    font-size: 20px;
+}
+
+.sumario .suma-linha {
+    flex-grow: 1; /* Faz a linha crescer para ocupar o espaço disponível */
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.sumario .suma-datal {
+    width: 15px;
+    height: 15px;
+    rotate: 45deg;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
 }

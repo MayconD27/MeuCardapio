@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "nome": "KG da comida",
+        "preco": 69.90,
+        "imagem": "/img/itens/almoco1.jpeg",
+        "descricao": "O almoço self-service oferece uma variedade de pratos frescos, como saladas, arroz, carnes e opções vegetarianas.",
+        "categoria": "Almoço",
+        "subcategoria": "Self"
+    },
+    {
+        "id":2,
+        "nome": "KG de churrasco",
+        "preco":86.90,
+        "imagem":"/img/itens/almoco2.jpeg",
+        "descricao": "O almoço self-service oferece uma variedade de pratos frescos, como saladas, arroz, carnes e opções vegetarianas.",
+        "categoria": "Almoço",
+        "subcategoria": "Self"
+    }
+
+]
