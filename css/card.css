@@ -25,6 +25,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 90%; /* Pode usar max-width para maior flexibilidade */
+    max-width: 400px;
 }
 
 .img-item{

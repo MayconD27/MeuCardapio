@@ -16,6 +16,42 @@
         "descricao": "O almoço self-service oferece uma variedade de pratos frescos, como saladas, arroz, carnes e opções vegetarianas.",
         "categoria": "Almoço",
         "subcategoria": "Self"
+    },
+    {
+        "id":3,
+        "nome": "Refrigerante lata(350ml)",
+        "preco":6.00,
+        "imagem":"/img/itens/refri1.png",
+        "descricao": "lata de refrigerante de 350ml",
+        "categoria": "Bebida",
+        "subcategoria": "Refrigerante"
+    },
+    {
+        "id":4,
+        "nome": "Coca-Cola 1L",
+        "preco":10.00,
+        "imagem":"/img/itens/refri2.jpeg",
+        "descricao": "Refrigerante coca-cola de 1 litro.",
+        "categoria": "Bebida",
+        "subcategoria": "Refrigerante"
+    },
+    {
+        "id":5,
+        "nome": "Fritas (500g)",
+        "preco":27.00,
+        "imagem":"/img/itens/frita1.jpeg",
+        "descricao": "crocante, dourada e levemente salgada, perfeita para um lanche.",
+        "categoria": "Meia",
+        "subcategoria": "Frita"
+    },
+    {
+        "id":6,
+        "nome": "Fritas com queijo (500g)",
+        "preco":34.00,
+        "imagem":"/img/itens/frita2.jpeg",
+        "descricao": "crocante, dourada e coberta por um queijo derretido, trazendo sabor irresistível a cada mordida.",
+        "categoria": "Meia",
+        "subcategoria": "Frita"
     }
 
 ]
