@@ -57,12 +57,24 @@ function criarCard(item) {
 function abrirOffcanvas(nome, descricao, imagem, preco) {
     const offcanvasBody = document.querySelector('.offcanvas-body');
     offcanvasBody.innerHTML = `
-        <img src="${imagem}" alt="${nome}" class="img-item">
-        <h4 class="nome-item">${nome}</h4>
-        <p class="descri-item">${descricao}</p>
-        <div class="preco-item">
-            <span>R$</span>
-            <p class="valor-item">${preco.toFixed(2).replace('.', ',')}</p>
+        <div class="cont-img">
+        <img src="${imagem}" alt="${nome}" class="img-canva">
+        </div>
+
+        <div class="detalhe-main">
+            <div class="linha v"></div>
+            <div class="cubo-canva"></div>
+            <div class="linha v"></div>
+        </div>
+
+        <h4 class="nome-canva">${nome}</h4>
+        <p class="descri-canva">${descricao}</p>
+        <div class="container-preco">
+            <div class="linha-canva"></div>
+            <div class="preco-item">
+                <span>R$</span>
+                <p class="valor-item">${preco.toFixed(2).replace('.', ',')}</p>
+            </div>
         </div>
     `;
     const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasBottom'));
