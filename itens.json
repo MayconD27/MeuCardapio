@@ -39,7 +39,7 @@
         "id":5,
         "nome": "Fritas (500g)",
         "preco":27.00,
-        "imagem":"/img/itens/frita1.jpeg",
+        "imagem":"/img/itens/frita1.jpg",
         "descricao": "crocante, dourada e levemente salgada, perfeita para um lanche.",
         "categoria": "Meia",
         "subcategoria": "Frita"
@@ -48,7 +48,7 @@
         "id":6,
         "nome": "Fritas com queijo (500g)",
         "preco":34.00,
-        "imagem":"/img/itens/frita2.jpeg",
+        "imagem":"/img/itens/frita2.jpg",
         "descricao": "crocante, dourada e coberta por um queijo derretido, trazendo sabor irresistível a cada mordida.",
         "categoria": "Meia",
         "subcategoria": "Frita"
