@@ -120,12 +120,23 @@
         </div>
         <div class="text-footer">
             <p><i class="bi bi-geo-alt-fill"></i> São José da Varginha - MG, 35694-000</p>
-            <p><i class="bi bi-telephone-fill"></i> 37) 98832-8341</p>
+            <p><i class="bi bi-telephone-fill"></i> (37) 98832-8341</p>
             <a href="https://www.instagram.com/pesquepaguevaraquebrada/reels/" target="_blank"><i class="bi bi-instagram"></i>@pesquepaguevaraquebrada</a>
             <span>&copy;2024 Vara Quebrada </span>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+        window.history.pushState(null, null, window.location.href);  // Adiciona um novo estado na pilha de histórico
+
+        window.onpopstate = function(event) {
+            window.history.pushState(null, null, window.location.href);  // Adiciona um novo estado ao tentar voltar
+        };
+        window.onbeforeunload = function() {
+            return "Tem certeza que deseja sair?";  // Exibe um alerta de confirmação.
+        };
+
+    </script>
 </body>
 </html>
