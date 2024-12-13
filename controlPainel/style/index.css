@@ -23,3 +23,8 @@ main{
     color: var(--primary-color);
     
 }
+.form{
+    display: flex;
+    flex-direction: column;
+
+}

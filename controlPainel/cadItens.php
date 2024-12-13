@@ -20,12 +20,12 @@
                 </a>
                 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                     <li class="nav-item">
-                        <a href="" class="nav-link active py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right" onclick="oppenPage()">
+                        <a href="./" class="nav-link  py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right" onclick="oppenPage()">
                             <i class="bi bi-house"></i> 
                         </a>
                     </li>
                     <li>
-                        <a href="cadItens.php" class="nav-link py-3 border-bottom" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right" onclick="oppenPage()">
+                        <a href="cadItens.php" class="nav-link active py-3 border-bottom" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right" onclick="oppenPage()">
                             <i class="bi bi-patch-plus"></i>
                         </a>
                     </li>
@@ -35,14 +35,35 @@
                     <img src="https://github.com/mdo.png" alt="mdo" width="34" height="34" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                        <li><a class="dropdown-item" href="#">Configurações</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sair</a></li>
                     </ul>
                 </div>
         </div>
         <div id="page">
+            <h2>Cadastro de produtos</h2>
+            <form action="" class="form">
+                <input type="file" src="" alt="">
 
+
+                <input type="text">
+                <input type="number" name="" id="">
+                <div class="categoria">
+                    <select name="" id="">
+                        <option value="">Almoço</option>
+                        <option value="">Bebida</option>
+                        <option value="">Meia Porção</option>
+                    </select>
+
+                    <select name="" id="">
+                        <option value="">sub categoria</option>
+                    </select>
+                </div>
+               
+                
+                <textarea name="" id="" placeholder="descrição"></textarea>
+            </form>
         </div>
     </main>
 </body>
