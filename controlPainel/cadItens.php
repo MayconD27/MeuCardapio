@@ -44,27 +44,49 @@
         <div id="page">
             <h2>Cadastro de produtos</h2>
             <form action="" class="form">
-                <input type="file" src="" alt="">
 
-
-                <input type="text">
-                <input type="number" name="" id="">
-                <div class="categoria">
-                    <select name="" id="">
-                        <option value="">Almoço</option>
-                        <option value="">Bebida</option>
-                        <option value="">Meia Porção</option>
-                    </select>
-
-                    <select name="" id="">
-                        <option value="">sub categoria</option>
-                    </select>
-                </div>
-               
+                <label class="piture" tabIndex="0">
+                    <input type="file" accept="image/*" src="" alt="" id="picture_input">
+                    <span class="picture_image">Carrege a imagem</span>
+                </label>
                 
-                <textarea name="" id="" placeholder="descrição"></textarea>
+                <div class="container-inputs">
+                    <label for="" class="label-input">Nome do Item</label>
+                    <input type="text" name="item" placeholder="ex: Batata">
+                    
+                    <label for="" class="label-input">Valor</label>
+                    <input type="number" name="valor" id="" placeholder="0.00">
+                    <div class="contariner-cat">
+                        <div class="cat">
+                            <label for="categoria">Categoria</label>
+                            <select name="" id="categoria">
+                                <option value="">Almoço</option>
+                                <option value="">Bebida</option>
+                                <option value="">Meia Porção</option>
+                            </select>
+                        </div>
+
+                        <div class="cat">
+                            <label for="subcat">Sub-Categoria</label>
+                            <select name="subcat" id="subcat">
+                                <option value="">sub categoria</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                
+                    <label for="" class="label-input">Descrição</label>
+                    <textarea name="" id="" placeholder="Descreva as informações do item"style="resize: none"></textarea>
+                    <div class="container-btn">
+                        <button>Cadastrar</button>
+                    </div>
+                    </div>
+
+
             </form>
+            
         </div>
     </main>
+    <script src="./script/interacao.js"></script>
 </body>
 </html>
