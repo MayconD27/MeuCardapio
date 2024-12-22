@@ -43,10 +43,10 @@
         </div>
         <div id="page">
             <h2>Cadastro de produtos</h2>
-            <form action="" class="form">
+            <form action="" class="form" id="meuForm">
 
                 <label class="piture" tabIndex="0">
-                    <input type="file" accept="image/*" src="" alt="" id="picture_input">
+                    <input type="file" accept="image/*" src="" alt="" name="image" id="picture_input">
                     <span class="picture_image">Carrege a imagem</span>
                 </label>
                 
@@ -55,30 +55,30 @@
                     <input type="text" name="item" placeholder="ex: Batata">
                     
                     <label for="" class="label-input">Valor</label>
-                    <input type="number" name="valor" id="" placeholder="0.00">
+                    <input type="number" name="valor" id="valor" placeholder="0.00">
                     <div class="contariner-cat">
                         <div class="cat">
                             <label for="categoria">Categoria</label>
-                            <select name="" id="categoria">
-                                <option value="">Almoço</option>
-                                <option value="">Bebida</option>
-                                <option value="">Meia Porção</option>
+                            <select name="categoria" id="categoria">
+                                <option value="almoco">Almoço</option>
+                                <option value="bebida">Bebida</option>
+                                <option value="meia porcao">Meia Porção</option>
                             </select>
                         </div>
 
                         <div class="cat">
                             <label for="subcat">Sub-Categoria</label>
                             <select name="subcat" id="subcat">
-                                <option value="">sub categoria</option>
+                                <option value="subCategoria">sub categoria</option>
                             </select>
                         </div>
                         
                     </div>
                 
                     <label for="" class="label-input">Descrição</label>
-                    <textarea name="" id="" placeholder="Descreva as informações do item"style="resize: none"></textarea>
+                    <textarea name="descricao" id="" placeholder="Descreva as informações do item"style="resize: none"></textarea>
                     <div class="container-btn">
-                        <button>Cadastrar</button>
+                        <button type='submit'>Cadastrar</button>
                     </div>
                     </div>
 
@@ -87,6 +87,8 @@
             
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/interacao.js"></script>
+
 </body>
 </html>

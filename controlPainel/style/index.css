@@ -134,3 +134,15 @@ label{
         box-shadow: 2px 2px 10px #58585854;
     }
 }
+
+.dropdown-menu .dropdown-item:active, 
+.dropdown-menu .dropdown-item:focus {
+    background-color: var(--primary-color) !important; /* Cor personalizada no clique */
+    color: white !important; /* Cor do texto */
+}
+
+/* Caso haja bordas ou outros estilos padrão do Bootstrap que apareçam no foco */
+.dropdown-menu .dropdown-item:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: none; /* Remove a sombra padrão do Bootstrap no foco */
+}

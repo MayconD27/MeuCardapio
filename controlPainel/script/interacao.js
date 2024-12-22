@@ -30,3 +30,23 @@ inputFile.addEventListener('change',(e)=>{
     }
 
 })
+
+
+const form = document.querySelector('#meuForm');
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault(); //Impede envio padrão do formulário
+    
+    //Coleta os dados do formulário
+    const formDado = new FormData(form);
+
+    //Testa exibição pra ver oq ta coletando
+    axios.post('cadastrarItens.php',formDado)
+        .then(function(response){
+            console.log(response.data);
+        })
+        .catch(function(error){
+            console.error('Erro ao envair os dados',error);
+            alert('Ocorreu um erro no envio dos dados');
+        })
+})

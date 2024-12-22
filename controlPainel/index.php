@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/painelIni.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
@@ -41,8 +42,54 @@
                     </ul>
                 </div>
         </div>
-        <div id="page">
 
+        <!--Pagina inicial -->
+        <div id="page">
+            <div class="busca">
+                <select name="" id="buscaCat">
+                    <option value="">Categoria</option>
+                    <option value="almoco">Almoço</option>
+                    <option value="bebida">Bebida</option>
+                    <option value="meia porcao">Meia Porção</option>
+                </select>
+                <input type="text" name="" id="buscaNome" placeholder="Digite o item que você procura">
+                <button class="order" id="orderItens">
+                    <i class="bi bi-arrow-down-up"></i>
+                </button>
+            </div>
+
+            <section class="listItens" id="listItens">
+                    <div class="cardItem">
+                        <img src="../img/itens/almoco1.jpeg" alt="">
+
+                        <div class="textCard">
+                            <div class="infoItem">
+                                <h3>Nome do Item</h3>
+                                <span class="cat">Categoria</span>
+                                <span class="subCat">Sub-categoria</span>
+                            </div>
+                            
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis architecto saepe sint minus inventore, in temporibus maxime ea totam, facere possimus doloribus, qui debitis quo commodi quod voluptatum atque? Magnam.
+                            </p>
+                            <div class="preco">
+                                <p>Valor: </p>
+                                <span>R$35,00</span>
+                            </div>
+                            
+                        </div>
+                        <div class="functionCad dropdown">
+                            <button class="btn drowpdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">Apagar</li>
+                                <li class="dropdown-item">Editar</li>
+                            </ul>    
+                        </div>
+
+                    </div>
+            </section>
         </div>
     </main>
 </body>
