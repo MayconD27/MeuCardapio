@@ -52,7 +52,7 @@
                 
                 <div class="container-inputs">
                     <label for="" class="label-input">Nome do Item</label>
-                    <input type="text" name="item" placeholder="ex: Batata">
+                    <input type="text" name="item" id="item" placeholder="ex: Batata">
                     
                     <label for="" class="label-input">Valor</label>
                     <input type="number" name="valor" id="valor" placeholder="0.00">
@@ -76,7 +76,7 @@
                     </div>
                 
                     <label for="" class="label-input">Descrição</label>
-                    <textarea name="descricao" id="" placeholder="Descreva as informações do item"style="resize: none"></textarea>
+                    <textarea name="descricao" id="desc" placeholder="Descreva as informações do item"style="resize: none"></textarea>
                     <div class="container-btn">
                         <button type='submit'>Cadastrar</button>
                     </div>
@@ -87,6 +87,7 @@
             
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/interacao.js"></script>
 

@@ -31,6 +31,16 @@ inputFile.addEventListener('change',(e)=>{
 
 })
 
+//inputs
+const img = document.querySelector('#picture_input');
+const item = document.querySelector('#item');
+const valor = document.querySelector('#valor');
+const categoria = document.querySelector('#categoria');
+const subCategoria = document.querySelector('#subcat');
+const desc = document.querySelector('#desc');
+
+
+
 
 const form = document.querySelector('#meuForm');
 
@@ -44,9 +54,26 @@ form.addEventListener('submit', (e)=>{
     axios.post('cadastrarItens.php',formDado)
         .then(function(response){
             console.log(response.data);
+            Swal.fire({
+                title: "Item cadastrado!",
+                icon: "success",
+                draggable: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    img.value ='';
+                    pictureImg.innerHTML ='<i class="bi bi-camera"></i> Carregue a imagem';
+                    item.value ='';
+                    valor.value ='';
+                    categoria.value ='';
+                    subCategoria.value='';
+                    desc.value = '';
+                }
+            });
         })
         .catch(function(error){
             console.error('Erro ao envair os dados',error);
             alert('Ocorreu um erro no envio dos dados');
         })
 })
+
+

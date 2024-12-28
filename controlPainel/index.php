@@ -59,38 +59,12 @@
             </div>
 
             <section class="listItens" id="listItens">
-                    <div class="cardItem">
-                        <img src="../img/itens/almoco1.jpeg" alt="">
-
-                        <div class="textCard">
-                            <div class="infoItem">
-                                <h3>Nome do Item</h3>
-                                <span class="cat">Categoria</span>
-                                <span class="subCat">Sub-categoria</span>
-                            </div>
-                            
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis architecto saepe sint minus inventore, in temporibus maxime ea totam, facere possimus doloribus, qui debitis quo commodi quod voluptatum atque? Magnam.
-                            </p>
-                            <div class="preco">
-                                <p>Valor: </p>
-                                <span>R$35,00</span>
-                            </div>
-                            
-                        </div>
-                        <div class="functionCad dropdown">
-                            <button class="btn drowpdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-three-dots-vertical"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">Apagar</li>
-                                <li class="dropdown-item">Editar</li>
-                            </ul>    
-                        </div>
-
-                    </div>
+ 
             </section>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/index.js"></script>
 </body>
+
 </html>
