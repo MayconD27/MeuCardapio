@@ -52,7 +52,7 @@ main{
 .piture{
     padding: 0;
     width: 200px;
-    height: 200px;
+    height:200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,19 +68,23 @@ main{
 }
 .picture_image{
     font-weight: 600;
+    width: 100%;
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 15px;
-    scale: 1.2;
+    scale: 1;
     transition: .5s;
     & i{
         font-size: 50px;
     }
 }
+.picture_img{
+    width: 110%;
+}
 .picture_image:hover{
-    scale: 1.4;
+    scale: 1.05;
     filter: brightness(.6);
 }
 label{

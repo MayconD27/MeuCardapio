@@ -58,6 +58,7 @@ form.addEventListener('submit', (e)=>{
                 title: "Item cadastrado!",
                 icon: "success",
                 draggable: true
+                
             }).then((result) => {
                 if (result.isConfirmed) {
                     img.value ='';

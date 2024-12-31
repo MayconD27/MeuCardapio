@@ -122,6 +122,9 @@
         
     }
 }
+.dropdown-item{
+    cursor: pointer;
+}
 li i{
     font-size: 15px;
 }
