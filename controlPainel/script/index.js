@@ -30,7 +30,8 @@ function CarregaPag () {
                            " </button>"+
                             "<ul class='dropdown-menu'>"+
                              "   <li class='dropdown-item' onclick = '"+`Deletar(${itens.id})`+"'><i class='bi bi-trash3'></i> Apagar</li>"+
-                              "  <li class='dropdown-item'><i class='bi bi-pencil-square'></i> Editar</li>"+
+                              `<a href='attItens.php?id=${itens.id}'>  <li class='dropdown-item'><i class='bi bi-pencil-square'></i>` +
+                            "Editar</li></a>"+
                             "</ul>"+    
                         "</div>"+
 

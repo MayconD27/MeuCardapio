@@ -150,3 +150,6 @@ label{
     outline: none; /* Remove o contorno padrão */
     box-shadow: none; /* Remove a sombra padrão do Bootstrap no foco */
 }
+a{
+    text-decoration: none;
+}
