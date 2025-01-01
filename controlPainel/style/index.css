@@ -25,6 +25,9 @@ main{
 }
 #page{
     width: 100%;
+    & h2{
+        padding: 20px;
+    }
 }
 .form{
     display: flex;

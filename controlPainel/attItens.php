@@ -119,37 +119,62 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-    const inputFile = document.querySelector("#picture_input");
-    const pictureImg = document.querySelector('.picture_image');
+        const inputFile = document.querySelector("#picture_input");
+        const pictureImg = document.querySelector('.picture_image');
 
-    inputFile.addEventListener('change',(e)=>{
-    const inputTarget = e.target;
-    const file = inputTarget.files[0];
-    console.log(file);
-    if(file){
-        const reader = new FileReader();
-        reader.addEventListener('load',(e)=>{
+        inputFile.addEventListener('change',(e)=>{
+            const inputTarget = e.target;
+            const file = inputTarget.files[0];
+            console.log(file);
             
-            const thisReader = e.target;
+            if(file){
+                const reader = new FileReader();
+                reader.addEventListener('load',(e)=>{
+                    
+                    const thisReader = e.target;
 
-            //criando a imagem
-            const img = document.createElement('img');
-            img.src = thisReader.result;
-            img.classList.add('picture_img');
+                    //criando a imagem
+                    const img = document.createElement('img');
+                    img.src = thisReader.result;
+                    img.classList.add('picture_img');
 
-            //Apaga as imagens anteriores
-            pictureImg.innerHTML= '';
-            
-            pictureImg.appendChild(img);
-            ;
+                    //Apaga as imagens anteriores
+                    pictureImg.innerHTML= '';
+                    
+                    pictureImg.appendChild(img);
+                    ;
+                })
+
+                reader.readAsDataURL(file);
+
+            }
+
         })
+    </script>
 
-        reader.readAsDataURL(file);
+    <script>
+        const subCat = document.querySelector('#subcat');
+        const cat = document.querySelector('#categoria');
+        const categorias = ['almoco','bebida','meia porcao'];
+        const listSub = [['self service','teste1'],['refrigerante','teste2'],['fritas','teste3']];      
+        let list = '';
+        cat.addEventListener('change',()=>{
+            categorias.forEach((catG,index) => {                
+                if (cat.value == catG) {
+                    console.log(index);
+                    list = listSub[index];
+                }
 
-    }
+                
+            });
 
-})
-
+                subCat.innerHTML = '';
+                // Adicionar as novas opções
+                list.forEach(l => {
+                    subCat.innerHTML += `<option value='${l}'>${l}</option>`;
+                });
+            
+        })
     </script>
 </body>
 </html>

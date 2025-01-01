@@ -83,7 +83,7 @@
                         <div class="cat">
                             <label for="subcat">Sub-Categoria</label>
                             <select name="subcat" id="subcat">
-                                <option value="teste">Teste</option>
+                                
                             </select>
                         </div>
                         
@@ -104,6 +104,29 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/interacao.js"></script>
+    <script>
+        const subCat = document.querySelector('#subcat');
+        const cat = document.querySelector('#categoria');
+        const categorias = ['almoco','bebida','meia porcao'];
+        const listSub = [['self service','teste1'],['refrigerante','teste2'],['fritas','teste3']];      
+        let list = '';
+        cat.addEventListener('change',()=>{
+            categorias.forEach((catG,index) => {                
+                if (cat.value == catG) {
+                    console.log(index);
+                    list = listSub[index];
+                }
 
+                
+            });
+
+                subCat.innerHTML = '';
+                // Adicionar as novas opções
+                list.forEach(l => {
+                    subCat.innerHTML += `<option value='${l}'>${l}</option>`;
+                });
+            
+        })
+    </script>
 </body>
 </html>
