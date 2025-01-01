@@ -51,7 +51,10 @@
                     <input type="file" accept="image/*" src="" alt="" name="image" id="picture_input">
                     <span class="picture_image">Carrege a imagem</span>
                 </label>
-                
+                <?php
+                        $categorias = ['almoco','bebida','meia porcao'];
+                        $catNome = ['Almoço','Bebida','Meia Porção'];
+                    ?>
                 <div class="container-inputs">
                     <label for="" class="label-input">Nome do Item</label>
                     <input type="text" name="item" id="item" placeholder="ex: Batata">
@@ -62,16 +65,25 @@
                         <div class="cat">
                             <label for="categoria">Categoria</label>
                             <select name="categoria" id="categoria">
-                                <option value="almoco">Almoço</option>
-                                <option value="bebida">Bebida</option>
-                                <option value="meia porcao">Meia Porção</option>
+                                <?php
+                                        foreach($categorias as $cat){
+                                            $nomeCat = $catNome[array_search($cat, $categorias)];
+                                            
+
+                                            echo "<option value='$cat'>
+                                            $nomeCat
+                                            </option>                                            
+                                            ";
+                                            
+                                        }
+                                    ?>
                             </select>
                         </div>
 
                         <div class="cat">
                             <label for="subcat">Sub-Categoria</label>
                             <select name="subcat" id="subcat">
-                                <option value="subCategoria">sub categoria</option>
+                                <option value="teste">Teste</option>
                             </select>
                         </div>
                         

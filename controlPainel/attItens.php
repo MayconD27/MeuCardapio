@@ -60,25 +60,44 @@
                 </label>
                 <div class="container-inputs">
                     <label for="" class="label-input">Nome do Item</label>
-                    <input type="text" name="item" id="item" placeholder="ex: Batata" value="<?php echo $produtos[0]['nome']?>teste">
+                    <input type="text" name="item" id="item" placeholder="ex: Batata" value="<?php echo $produtos[0]['nome']?>">
                     
                     <label for="" class="label-input">Valor</label>
                     <input type="number" name="valor" id="valor" placeholder="0.00" value="<?php echo $produtos[0]['valor']?>">
-                    
+                    <?php
+                        $categorias = ['almoco','bebida','meia porcao'];
+                        $catNome = ['Almoço','Bebida','Meia Porção'];
+                    ?>
                     <div class="contariner-cat">
                         <div class="cat">
                             <label for="categoria">Categoria</label>
                             <select name="categoria" id="categoria">
-                                <option value="almoco">Almoço</option>
-                                <option value="bebida">Bebida</option>
-                                <option value="meia porcao">Meia Porção</option>
+
+                                <?php
+                                    foreach($categorias as $cat){
+                                        $nomeCat = $catNome[array_search($cat, $categorias)];
+                                        if($produtos[0]['categoria']==$cat){
+
+                                            echo "<option value='$cat'selected>
+                                            $nomeCat
+                                            </option>                                            
+                                            ";
+                                        }else{
+
+                                            echo "<option value='$cat'>
+                                            $nomeCat
+                                            </option>                                            
+                                            ";
+                                        }
+                                    }
+                                ?>
                             </select>
                         </div>
 
                         <div class="cat">
                             <label for="subcat">Sub-Categoria</label>
                             <select name="subcat" id="subcat">
-                                <option value="subCategoria">sub categoria</option>
+                                
                             </select>
                         </div>
                         
