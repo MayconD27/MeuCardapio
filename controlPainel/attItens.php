@@ -52,10 +52,10 @@
         </div>
         <div id="page">
             <h2>Atualizar Produto</h2>
-            <form action="" class="form" id="meuForm">
-
+            <form action="atualizarItens.php" method="POST" class="form" id="meuForm" enctype="multipart/form-data">
+                <input type="number" value="<?php echo $produtos[0]['id'];?>" style="display:none;" name="id">
                 <label class="piture" tabIndex="0">
-                    <input type="file" accept="image/*" src="" alt="" name="image" id="picture_input">
+                    <input type="file" accept="image/*" src="../<?php echo $produtos[0]['imagem']?>" alt="" name="image" id="picture_input">
                     <span class="picture_image"><img src="../<?php echo $produtos[0]['imagem']?>" alt=""></span>
                 </label>
                 <div class="container-inputs">
@@ -93,11 +93,17 @@
                                 ?>
                             </select>
                         </div>
-
+                        <?php
+                            $sub = $produtos[0]['subCategoria'];
+                        ?>
                         <div class="cat">
                             <label for="subcat">Sub-Categoria</label>
                             <select name="subcat" id="subcat">
                                 
+                                <option value="<?php echo $sub;?>">
+                                    <?php echo $sub;?>
+                                </option>
+
                             </select>
                         </div>
                         
@@ -158,6 +164,7 @@
         const categorias = ['almoco','bebida','meia porcao'];
         const listSub = [['self service','teste1'],['refrigerante','teste2'],['fritas','teste3']];      
         let list = '';
+
         cat.addEventListener('change',()=>{
             categorias.forEach((catG,index) => {                
                 if (cat.value == catG) {
