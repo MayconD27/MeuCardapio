@@ -41,7 +41,7 @@
                 </ul>
                 <div class="dropdown border-top">
                     <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="34" height="34" class="rounded-circle">
+                    <img src="../img/perfil.png" alt="mdo" width="34" height="34" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
                     <li><a class="dropdown-item" href="#">Configurações</a></li>
@@ -55,7 +55,7 @@
             <form action="atualizarItens.php" method="POST" class="form" id="meuForm" enctype="multipart/form-data">
                 <input type="number" value="<?php echo $produtos[0]['id'];?>" style="display:none;" name="id">
                 <label class="piture" tabIndex="0">
-                    <input type="file" accept="image/*" src="../<?php echo $produtos[0]['imagem']?>" alt="" name="image" id="picture_input">
+                    <input type="file" accept="image/*" value="../<?php echo $produtos[0]['imagem']?>" alt="" name="image" id="picture_input">
                     <span class="picture_image"><img src="../<?php echo $produtos[0]['imagem']?>" alt=""></span>
                 </label>
                 <div class="container-inputs">

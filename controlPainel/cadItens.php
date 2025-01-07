@@ -34,7 +34,7 @@
                 </ul>
                 <div class="dropdown border-top">
                     <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="34" height="34" class="rounded-circle">
+                    <img src="../img/perfil.png" alt="mdo" width="34" height="34" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
                     <li><a class="dropdown-item" href="#">Configurações</a></li>

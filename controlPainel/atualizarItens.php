@@ -12,6 +12,7 @@
     $nome = basename($image['name']);
 
     $uploadFile = "../upload/$nome";
+    echo "$uploadFile";
 
     $caminhoImg = "upload/$nome";
 
@@ -45,7 +46,26 @@
     
     }
     else{
-        echo "falhou";
-        echo $uploadFile;
+        $sql = "UPDATE produtos SET nome = :item, valor = :valor, descricao = :descricao, categoria = :categoria, subcategoria = :subcategoria WHERE id = :id";
+        
+        // Preparando o comando SQL
+        $stmt = $bd->prepare($sql);
+        
+        // Bind dos parâmetros
+        $stmt->bindParam(':item', $item);
+        $stmt->bindParam(':valor', $valor);
+        $stmt->bindParam(':descricao', $descricao);
+        $stmt->bindParam(':categoria', $categoria);
+        $stmt->bindParam(':subcategoria', $subCategoria);
+        $stmt->bindParam(':id', $id);
+
+        
+        if($stmt->execute()){
+            echo "<br>atualizado";
+        }
+        else{
+            echo "não subiu";
+        }
     }
+
 ?>
