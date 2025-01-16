@@ -55,7 +55,7 @@ window.onload = CarregaPag;
         
         // Envia o id como um objeto no corpo da requisição, com content-type 'application/x-www-form-urlencoded'
         Swal.fire({
-            title: "Item cadastrado!",
+            title: "Deseja remover esse item?",
             icon: "warning",
             showCancelButton:true,
             cancelButtonText: "Cancelar",

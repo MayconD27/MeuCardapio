@@ -61,7 +61,7 @@
 
         
         if($stmt->execute()){
-            echo "<br>atualizado";
+            header('location: ../controlPainel');
         }
         else{
             echo "não subiu";

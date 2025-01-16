@@ -54,6 +54,7 @@ form.addEventListener('submit', (e)=>{
     axios.post('cadastrarItens.php',formDado)
         .then(function(response){
             console.log(response.data);
+            
             Swal.fire({
                 title: "Item cadastrado!",
                 icon: "success",

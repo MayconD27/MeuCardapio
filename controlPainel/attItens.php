@@ -63,9 +63,9 @@
                     <input type="text" name="item" id="item" placeholder="ex: Batata" value="<?php echo $produtos[0]['nome']?>">
                     
                     <label for="" class="label-input">Valor</label>
-                    <input type="number" name="valor" id="valor" placeholder="0.00" value="<?php echo $produtos[0]['valor']?>">
+                    <input type="number" name="valor" id="valor" placeholder="0.00" value="<?php echo $produtos[0]['valor']?>" step="0.01">
                     <?php
-                        $categorias = ['almoco','bebida','meia porcao'];
+                        $categorias = ['almoco','bebida','meia-porcao'];
                         $catNome = ['Almoço','Bebida','Meia Porção'];
                     ?>
                     <div class="contariner-cat">

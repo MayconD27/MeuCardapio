@@ -1,10 +1,17 @@
 async function buscarProdutos() {
     try {
-        const response = await fetch('./itens.json'); 
+        // Modifique a URL para apontar para o arquivo PHP
+        const response = await fetch('./controlPainel/selectItens.php'); 
+        
         if (!response.ok) {
             throw new Error('Erro ao buscar os dados');
         }
+
+        // Converte a resposta JSON em um array de objetos
         const produtos = await response.json(); 
+        console.log(produtos);
+        
+        // Preenche a lista com os produtos recebidos
         preencherLista(produtos); 
     } catch (error) {
         console.error('Erro:', error);
@@ -18,17 +25,17 @@ function preencherLista(produtos) {
     const containerMeiaFrita = document.getElementById('meiaFrita');
 
     const itensAlmoco = produtos
-        .filter(item => item.categoria === "Almoço" && item.subcategoria === "Self")
+        .filter(item => item.categoria === "almoco" && item.subCategoria === "self-service")
         .map(item => criarCard(item))
         .join('');
 
     const itensRefri = produtos
-        .filter(item => item.categoria === "Bebida" && item.subcategoria === "Refrigerante")
+        .filter(item => item.categoria === "bebida" && item.subCategoria === "refrigerante")
         .map(item => criarCard(item))
         .join('');
 
     const itensMeiaFrita = produtos
-        .filter(item => item.categoria === "Meia" && item.subcategoria === "Frita")
+        .filter(item => item.categoria === "meia-porcao" && item.subCategoria === "fritas")
         .map(item => criarCard(item))
         .join('');
 
@@ -40,7 +47,7 @@ function preencherLista(produtos) {
 // Função para criar o card e adicionar evento de clique
 function criarCard(item) {
     return `
-        <div class="card-item" onclick="abrirOffcanvas('${item.nome}', '${item.descricao}', '${item.imagem}', ${item.preco})">
+        <div class="card-item" onclick="abrirOffcanvas('${item.nome}', '${item.descricao}', '${item.imagem}', ${item.valor})">
             <img src="${item.imagem}" alt="" class="img-item">
             <div class="text-card">
                 <h4 class="nome-item">${item.nome}</h4>
@@ -48,7 +55,7 @@ function criarCard(item) {
             </div>
             <div class="preco-item">
                 <span>R$</span>
-                <p class="valor-item">${item.preco.toFixed(2).replace('.', ',')}</p>
+                <p class="valor-item">${item.valor.toFixed(2).replace('.', ',')}</p>
             </div>
         </div>
     `;

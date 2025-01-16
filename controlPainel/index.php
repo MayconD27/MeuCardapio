@@ -6,7 +6,11 @@
     <title>Painel de Controle</title>
 
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-   
+   <style>
+    .swal2-confirm{
+        background-color:red;
+    }
+   </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/index.css">
@@ -15,6 +19,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
+
+<?php
+        include_once './bd.php';
+        session_start();
+        $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
+
+        if($usuarioLogado== false){
+            header('location: ./login');
+            exit;
+        }
+                    
+    ?>
 <body>
 
     <main>
@@ -41,7 +57,7 @@
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
                         <li><a class="dropdown-item" href="#">Configurações</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                        <li><a class="dropdown-item" href="./logout.php">Sair</a></li>
                     </ul>
                 </div>
         </div>

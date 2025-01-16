@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <style>
+        .swal2-confirm{
+            background-color:var(--primary-color);
+        }
+    </style>
 </head>
 <body>
 
@@ -52,7 +56,7 @@
                     <span class="picture_image">Carrege a imagem</span>
                 </label>
                 <?php
-                        $categorias = ['almoco','bebida','meia porcao'];
+                        $categorias = ['almoco','bebida','meia-porcao'];
                         $catNome = ['Almoço','Bebida','Meia Porção'];
                     ?>
                 <div class="container-inputs">
@@ -60,7 +64,7 @@
                     <input type="text" name="item" id="item" placeholder="ex: Batata">
                     
                     <label for="" class="label-input">Valor</label>
-                    <input type="number" name="valor" id="valor" placeholder="0.00">
+                    <input type="number" name="valor" id="valor" placeholder="0.00" step="0.01">
                     <div class="contariner-cat">
                         <div class="cat">
                             <label for="categoria">Categoria</label>
@@ -107,9 +111,11 @@
     <script>
         const subCat = document.querySelector('#subcat');
         const cat = document.querySelector('#categoria');
-        const categorias = ['almoco','bebida','meia porcao'];
-        const listSub = [['self service','teste1'],['refrigerante','teste2'],['fritas','teste3']];      
+        const categorias = ['almoco','bebida','meia-porcao'];
+
+        const listSub = [['self-service'],['refrigerante'],['fritas']];      
         let list = '';
+
         cat.addEventListener('change',()=>{
             categorias.forEach((catG,index) => {                
                 if (cat.value == catG) {
