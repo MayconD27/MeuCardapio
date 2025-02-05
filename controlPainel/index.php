@@ -36,7 +36,7 @@
     <main>
         <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 6.5rem; height:100vh;">
                 <a href="/VaraQuebrada/controlPainel" class="d-block p-3 link-dark text-decoration-none logo"  data-bs-toggle="tooltip" data-bs-placement="right">
-                    <img src="../img/logo.png" alt="logo">
+                    <img src="../img/logo-black.png" alt="logo">
                 </a>
                 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                     <li class="nav-item">

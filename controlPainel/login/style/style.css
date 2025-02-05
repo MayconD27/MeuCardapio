@@ -29,7 +29,7 @@ section{
     justify-content: center;
     border-right: 1px solid #fff;
     width: 200px;
-    background-color: #82ca98;
+    background-color: #294b33;
     margin-right: 20px;
 }
 .img_logo{
@@ -41,7 +41,7 @@ section{
 }
 .form_login input{
     border-radius: 10px;
-    border: 1px solid #82ca98;
+    border: 1px solid #486d53;
     margin: 10px 0;
     width: 100%;
     max-width: 250px;

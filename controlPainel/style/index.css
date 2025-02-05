@@ -38,6 +38,9 @@ main{
     margin: 0 auto;
 
 }
+.sidebar{
+   background-color: #ff0000de !important; 
+}
 .contariner-cat{
     display: flex;
     width: 98%;
